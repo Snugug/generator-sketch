@@ -20,7 +20,12 @@
     "app"
   ],
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "sketch",
+    "design-in-browser",
+    "design",
+    "prototype",
+    "prototyping"
   ],
   "dependencies": {
     "yeoman-generator": "~0.16.0",
