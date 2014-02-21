@@ -15,9 +15,9 @@ var SketchGenerator = yeoman.generators.Base.extend({
         if (!this.options['init']) {
           process.chdir(this.folder);
         }
+        sh.run('bundle install');
         this.npmInstall();
         this.bowerInstall();
-        sh.run('bundle install');
       }
     });
   },
