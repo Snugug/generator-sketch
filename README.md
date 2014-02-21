@@ -1,4 +1,4 @@
-# generator-sketch [![Build Status](https://secure.travis-ci.org/Snugug/generator-sketch.png?branch=master)](https://travis-ci.org/Snugug/generator-sketch)
+# generator-sketch
 
 > [Yeoman](http://yeoman.io) generator
 
@@ -9,7 +9,7 @@
 
 Trick question. It's not a thing. It's this guy:
 
-![](http://i.imgur.com/JHaAlBJ.png)
+![Yeoman!](http://i.imgur.com/JHaAlBJ.png)
 
 Basically, he wears a top hat, lives in your computer, and waits for you to tell him what kind of application you wish to create.
 
@@ -17,6 +17,12 @@ Not every new computer comes with a Yeoman pre-installed. He lives in the [npm](
 
 ```
 $ npm install -g yo
+```
+
+He also likes to bundle up his [Sasssy](http://sass-lang.com/) friends. You only need to get his [packaging tape](http://bundler.io/) once, and then he'll be set. His tape lives in the [RubyGems](http://rubygems.org/) package repository.
+
+```
+$ gem install bundler
 ```
 
 ### Yeoman Generators
