@@ -41,22 +41,31 @@ var SketchGenerator = yeoman.generators.Base.extend({
     // replace it with a short and sweet description of your generator
     console.log(chalk.magenta('Quickly sketch out ideas in HTML, Sass, and JS.'));
 
-    var prompts = [{
-      type: 'string',
-      name: 'sketchName',
-      message: 'What\'s your project\'s name?' + chalk.red(' (Required)'),
-      validate: function (input) {
-        if (input === '') {
-          return 'Please enter your project\'s name';
+    var prompts = [
+      {
+        type: 'string',
+        name: 'sketchName',
+        message: 'What\'s your project\'s name?' + chalk.red(' (Required)'),
+        validate: function (input) {
+          if (input === '') {
+            return 'Please enter your project\'s name';
+          }
+          return true;
         }
-        return true;
+      },
+      {
+        type: 'confirm',
+        name: 'rwdStack',
+        message: 'Would you like to include the basic responsive stack (Breakpoint, Singularity, Toolkit)?',
+        default: true
       }
-    }];
+    ];
 
     this.prompt(prompts, function (props) {
       this.sketchName = props.sketchName;
       this.slug = _s.slugify(this.sketchName);
       this.folder = this.options['init'] ? '.' : this.slug;
+      this.rwdStack = props.rwdStack;
 
       done();
     }.bind(this));
@@ -68,18 +77,23 @@ var SketchGenerator = yeoman.generators.Base.extend({
   },
 
   projectfiles: function () {
+    var srcPath = 'rwd/';
+    if (!this.rwdStack) {
+      srcPath = 'basic/';
+    }
+
     this.copy('editorconfig', this.folder + '/.editorconfig');
     this.copy('jshintrc', this.folder + '/.jshintrc');
     this.copy('gitignore', this.folder + '/.gitignore');
     this.directory('bundle', this.folder + '/.bundle');
 
-    this.copy('config.rb', this.folder + '/config.rb');
+    this.copy(srcPath + 'config.rb', this.folder + '/config.rb');
     this.copy('Gruntfile.js', this.folder + '/Gruntfile.js');
 
     this.template('index.html', this.folder + '/index.html');
-    this.copy('Gemfile', this.folder + '/Gemfile');
+    this.copy(srcPath + 'Gemfile', this.folder + '/Gemfile');
 
-    this.directory('sass', this.folder + '/sass');
+    this.copy(srcPath + 'style.scss', this.folder + '/sass/style.scss');
     this.copy('gitkeep', this.folder + '/images/.gitkeep');
     this.copy('gitkeep', this.folder + '/js/.gitkeep');
     this.copy('gitkeep', this.folder + '/fonts/.gitkeep');

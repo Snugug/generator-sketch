@@ -1,0 +1,5 @@
+source 'http://rubygems.org'
+gem 'compass', '~>1.0.0.alpha.17'
+gem 'breakpoint', '~>2.4.0'
+gem 'singularitygs', '~>1.2.0.rc.6'
+gem 'toolkit', '~>2.0.0.alpha.7'
