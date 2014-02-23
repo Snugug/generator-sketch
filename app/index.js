@@ -25,11 +25,21 @@ var SketchGenerator = yeoman.generators.Base.extend({
   askFor: function () {
     var done = this.async();
 
-    // have Yeoman greet the user
-    console.log(this.yeoman);
+    //Greet the user with Sketch!
+    var welcome =
+    chalk.white('\n  _______ __          __        __    ') +
+    chalk.white('\n |   _   |  |--.-----|  |_.----|  |--.') +
+    chalk.white('\n |   |___|    <|  -__|   _|  __|     |') +
+    chalk.white('\n |____   |__|__|_____|____|____|__|__|') +
+    chalk.white('\n |   |   |   ') + chalk.magenta('____') + chalk.gray('_') + chalk.yellow('__________________') +
+    chalk.white('\n |       |  ') + chalk.magenta('/   ') + chalk.gray('//') + chalk.yellow('=================') + chalk.red('/`"-._') +
+    chalk.white('\n `-------\' ') + chalk.magenta('|   ') + chalk.gray('||') + chalk.yellow('=================') + chalk.red('|      ') + chalk.grey('D') +
+    chalk.magenta('\n            \\___') + chalk.gray('\\\\') + chalk.yellow('_________________') + chalk.red('\\__.-"');
+
+    console.log(welcome + '\n');
 
     // replace it with a short and sweet description of your generator
-    console.log(chalk.magenta('You\'re using the fantastic Sketch generator.'));
+    console.log(chalk.magenta('Quickly sketch out ideas in HTML, Sass, and JS.'));
 
     var prompts = [{
       type: 'string',
