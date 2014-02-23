@@ -31,7 +31,7 @@ Not every new computer comes with a Yeoman pre-installed. He lives in the [npm](
 $ npm install -g yo
 ```
 
-He also likes to bundle up his [Sasssy](http://sass-lang.com/) friends. You only need to get his [packaging tape](http://bundler.io/) once, and then he'll be set. His tape lives in the [RubyGems](http://rubygems.org/) package repository.
+He also likes to bundle up his [Sassy](http://sass-lang.com/) friends. You only need to get his [packaging tape](http://bundler.io/) once, and then he'll be set. His tape lives in the [RubyGems](http://rubygems.org/) package repository.
 
 ```
 $ gem install bundler
