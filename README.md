@@ -1,6 +1,18 @@
-# generator-sketch
+# Sketch
 
-> [Yeoman](http://yeoman.io) generator
+```
+  _______ __          __        __    
+ |   _   |  |--.-----|  |_.----|  |--.
+ |   |___|    <|  -__|   _|  __|     |
+ |____   |__|__|_____|____|____|__|__|
+ |   |   |   _______________________
+ |       |  /   //=================/`"-._
+ `-------' |   ||=================|      D
+            \___\\_________________\__.-"'
+```
+
+
+> A [Yeoman](http://yeoman.io) generator for sketching in HTML, Sass, and JS
 
 
 ## Getting Started
@@ -39,6 +51,16 @@ Finally, initiate the generator:
 
 ```
 $ yo sketch
+```
+
+Sketch also has some templates to make sketching easier. The following templates are available:
+
+#### Style Tile Template
+
+Spin up a responsive [style tile](http://styletil.es/), including the Sass required to power the basic tile. Copy taken from [Fillerama](http://chrisvalleskey.com/fillerama/). From the root of your project, run the following:
+
+```
+$ yo sketch:template style-tile
 ```
 
 ### Getting To Know Yeoman
