@@ -1,4 +1,4 @@
-# Sketch
+# Sketch [![NPM version](https://badge.fury.io/js/generator-sketch.png)](http://badge.fury.io/js/generator-sketch)
 
 ```
   _______ __          __        __    
