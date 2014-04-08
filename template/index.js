@@ -11,21 +11,29 @@ var types = '',
     options = '';
 var templates = ['style-tile'];
 
-var TemplateGenerator = yeoman.generators.NamedBase.extend({
-  init: function () {
-    if (this.args.length > 1) {
-      options = this.args.shift();
-    }
-    types = this.name.split(':');
-    type = types[0];
-    if (types.length > 1) {
-      name = types[1];
-    }
-    // console.log('You called the ' + type + ' template with the name ' + name);
+var TemplateGenerator = yeoman.generators.Base.extend({
+  askFor: function () {
+    var done = this.async();
+
+    var prompts = [
+      {
+        type: 'list',
+        name: 'type',
+        message: 'Which template would you like to generate?',
+        choices: ['Style Tile'],
+        default: 'Style Tile'
+      }
+    ];
+
+    this.prompt(prompts, function (props) {
+      this.type = _s.slugify(props.type);
+
+      done();
+    }.bind(this));
   },
 
   files: function () {
-    if (type.toLowerCase() === 'style-tile') {
+    if (this.type === 'style-tile') {
       var indexPath = 'style-tile';
       var sassPath = 'sass';
 
