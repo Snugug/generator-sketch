@@ -55,13 +55,19 @@ $ yo sketch
 
 Sketch also has some templates to make sketching easier. The following templates are available:
 
-#### Style Tile Template
+#### Templates
 
-Spin up a responsive [style tile](http://styletil.es/), including the Sass required to power the basic tile. Copy taken from [Fillerama](http://chrisvalleskey.com/fillerama/). From the root of your project, run the following:
+Quickly spin up templates of commonly used patterns!
 
 ```
-$ yo sketch:template style-tile
+$ yo sketch:template
 ```
+
+Currently available templates:
+
+* Style Tile - A Responsive [style tile](http://styletil.es/), including the Sass required to power the basic tile. Copy taken from [Fillerama](http://chrisvalleskey.com/fillerama/). Run Template from the root of your directory.
+
+
 
 ### Getting To Know Yeoman
 
